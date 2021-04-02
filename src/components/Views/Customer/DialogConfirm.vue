@@ -36,12 +36,35 @@ export default {
           this.$emit("hideDialogDetail", false);
       }  ,
       btnOnConfirmOk(){
+       if(this.formMode=="Add"){
+           alert("thêm");
+       }
+       else if(this.formMode=="Edit"){
+           alert("Sửa");
+        //     axios
+        //   .put(
+        //     "http://api.manhnv.net/api/customers/" + this.idCustomer,
+        //     this.customer
+        //   )
+        //   .then((res) => {
+        //     this.reLoadCustomer();
+        //     this.$emit('btnOnCloseClick');
+        //     this.$emit("hideDialogDetail", false);
+        //     console.log(res);
+        //     this.message="Bạn có chắc muốn sửa"
+        //   })
+        //   .catch((res) => {
+        //     console.log(res);
+        //   });
+       }
+       else{
         this.$emit("hideDialogDetail", false);
 
         axios.delete("http://api.manhnv.net/api/customers/"+this.idCustomer).then(()=>{
        this.reLoadCustomer();
-        // alert(this.idCustomer);
+        this.message="Bạn có chắc chắn muốn xóa";
       })
+       }
       },
       reLoadCustomer(){
           this.$emit('reLoadData');

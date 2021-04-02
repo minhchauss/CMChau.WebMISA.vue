@@ -39,7 +39,7 @@
             v-for="customer in customers"
             :key="customer.CustomerId"
             @dblclick="dblOnClick(customer.CustomerId)"
-
+            
           >
             <td>{{ customer.CustomerCode }}</td>
             <td>{{ customer.FullName }}</td>
@@ -95,8 +95,10 @@
     />
     <DialogConfirm
     :isShow="isShowDialog"
+    @reLoadData="getData"
     :idCustomer="idCustomer"
      @hideDialogDetail="hideDialogDetail"
+     :formMode="formModeDetail"
     />
   </div>
 <!-- </div> -->
@@ -140,7 +142,9 @@ export default {
         // this.idCustomer=null;
         this.hideDialog = false;
         this.formModeDetail='Add';
+        // e.preventDefault();
         // this.customers={};
+        
     },
     //ẩn dialog ở component cha khi bấm nút X hoặc Hủy ở component con
     hideDialogDetail(){

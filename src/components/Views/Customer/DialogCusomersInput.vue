@@ -180,14 +180,18 @@ export default {
           });
       }
     },
-
+    clearFormInput(){
+      this.customer={};
+    },
        formatDate(date){
       if(!date)return "";
       else
       return moment(date).format('MM/DD/YYYY');
     }
   },
-
+  // created() {
+  //   this.clearFormInput();
+  // },
   //Lấy data của 1 customer binding vào form
   watch: {
     idCustomer: function () {
