@@ -1,0 +1,19 @@
+1, Gọi api, thêm sửa xóa như bài UI
+    -render dữ liệu ra bảng-------------------OK
+    -thêm------------------------------OK
+    -sửa----------------------------------OK
+        +binding dữ liệu vào form dialog--------------OK
+    -xóa
+        +Hiện form cảnh báo-----------------------------OK
+
+
+2, Bắt sự kiện các nút bấm, dblclick
+    -Click nút thêm------------------------OK
+    -dblclick hiện form---------------------OK
+    -X và hủy để ẩn form----------------------OK
+    -Khi bấm nút thêm thì clear form---------------------chưa
+    -style khi focus:------------------------------------chưa
+
+
+3,Tạo router ---------------------------------OK
+

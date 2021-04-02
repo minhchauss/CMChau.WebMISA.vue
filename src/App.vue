@@ -1,22 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <div id="app">
+    <TheHeader/>
+    <TheNavbar/>
+    <TheContent/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/layouts/TheHeader.vue'
+import TheContent from './components/layouts/TheContent.vue'
+import TheNavbar from './components/layouts/TheNavbar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TheHeader,
+    TheContent,
+    TheNavbar,
+   
   }
 }
 </script>
 
 <style>
+@import url(./assets/css/CommonCss/button.css);
+@import url(./assets/css/CommonCss/combobox.css);
+@import url(./assets/css/CommonCss/common.css);
+@import url(./assets/css/CommonCss/dialog.css);
+@import url(./assets/css/CommonCss/icon.css);
+@import url(./assets/css/CommonCss/input.css);
+@import url(./assets/css/CommonCss/slideshow.css);
+@import url(./assets/css/CommonCss/table.css);
+@import url(./assets/css/CustomerCss/customer.css);
+@import url(./assets/css/CommonCss/common.css);
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
